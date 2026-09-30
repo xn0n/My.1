@@ -47,7 +47,6 @@ namespace My {
 			}
 		}
 
-	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 
 
 
@@ -61,7 +60,8 @@ namespace My {
 
 
 
-	private: System::Windows::Forms::ToolStripMenuItem^ выходИзMyAppToolStripMenuItem;
+
+
 
 	private: System::Windows::Forms::TextBox^ tbTitle;
 
@@ -138,16 +138,20 @@ namespace My {
 	private: System::Windows::Forms::DataGridView^ dgvSort;
 
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+private: System::Windows::Forms::ToolStripMenuItem^ задание31ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ выходИзMyAppToolStripMenuItem;
+private: System::Windows::Forms::MenuStrip^ menuStrip1;
 
-	private: System::Windows::Forms::ToolStripMenuItem^ маскаToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ шифрованиеToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ задание31ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ матрицаToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ рекурсияToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ сведенияОПрограммистеToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ лабиринтToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ фигурыToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ сортировкаToolStripMenuItem1;
+
+
+
+
+
+
+
+
+
+
 
 	protected:
 
@@ -164,17 +168,7 @@ namespace My {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->маскаToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->шифрованиеToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->задание31ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->матрицаToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->рекурсияToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->лабиринтToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->сведенияОПрограммистеToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->фигурыToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->сортировкаToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->выходИзMyAppToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->tbTitle = (gcnew System::Windows::Forms::TextBox());
 			this->lbOutput = (gcnew System::Windows::Forms::ListBox());
 			this->dgvOutput = (gcnew System::Windows::Forms::DataGridView());
@@ -218,119 +212,32 @@ namespace My {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->menuStrip1->SuspendLayout();
+			this->задание31ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->выходИзMyAppToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvOutput))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->formula1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->formula2))->BeginInit();
 			this->SortInput->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvSort))->BeginInit();
 			this->groupBox1->SuspendLayout();
+			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// menuStrip1
-			// 
-			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(10) {
-				this->маскаToolStripMenuItem,
-					this->шифрованиеToolStripMenuItem, this->задание31ToolStripMenuItem, this->матрицаToolStripMenuItem, this->рекурсияToolStripMenuItem,
-					this->лабиринтToolStripMenuItem, this->сведенияОПрограммистеToolStripMenuItem, this->фигурыToolStripMenuItem, this->сортировкаToolStripMenuItem1,
-					this->выходИзMyAppToolStripMenuItem
-			});
-			this->menuStrip1->Location = System::Drawing::Point(0, 0);
-			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1527, 31);
-			this->menuStrip1->TabIndex = 1;
-			this->menuStrip1->Text = L"menuStrip1";
-			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &MyForm::menuStrip1_ItemClicked);
-			// 
-			// маскаToolStripMenuItem
-			// 
-			this->маскаToolStripMenuItem->Name = L"маскаToolStripMenuItem";
-			this->маскаToolStripMenuItem->Size = System::Drawing::Size(75, 27);
-			this->маскаToolStripMenuItem->Text = L"Маска";
-			this->маскаToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::маскаToolStripMenuItem_Click_1);
-			// 
-			// шифрованиеToolStripMenuItem
-			// 
-			this->шифрованиеToolStripMenuItem->Name = L"шифрованиеToolStripMenuItem";
-			this->шифрованиеToolStripMenuItem->Size = System::Drawing::Size(131, 27);
-			this->шифрованиеToolStripMenuItem->Text = L"Шифрование";
-			this->шифрованиеToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::шифрованиеToolStripMenuItem_Click);
-			// 
-			// задание31ToolStripMenuItem
-			// 
-			this->задание31ToolStripMenuItem->Name = L"задание31ToolStripMenuItem";
-			this->задание31ToolStripMenuItem->Size = System::Drawing::Size(216, 27);
-			this->задание31ToolStripMenuItem->Text = L"Задание 3.1 (1 семестр)";
-			this->задание31ToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::задачаToolStripMenuItem_Click);
-			// 
-			// матрицаToolStripMenuItem
-			// 
-			this->матрицаToolStripMenuItem->Name = L"матрицаToolStripMenuItem";
-			this->матрицаToolStripMenuItem->Size = System::Drawing::Size(103, 27);
-			this->матрицаToolStripMenuItem->Text = L"Матрица";
-			this->матрицаToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::лабораторнаяРабота4матрицаToolStripMenuItem_Click);
-			// 
-			// рекурсияToolStripMenuItem
-			// 
-			this->рекурсияToolStripMenuItem->Name = L"рекурсияToolStripMenuItem";
-			this->рекурсияToolStripMenuItem->Size = System::Drawing::Size(98, 27);
-			this->рекурсияToolStripMenuItem->Text = L"Рекурсия";
-			this->рекурсияToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::таблицаToolStripMenuItem_Click);
-			// 
-			// лабиринтToolStripMenuItem
-			// 
-			this->лабиринтToolStripMenuItem->Name = L"лабиринтToolStripMenuItem";
-			this->лабиринтToolStripMenuItem->Size = System::Drawing::Size(111, 27);
-			this->лабиринтToolStripMenuItem->Text = L"Лабиринт";
-			this->лабиринтToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::лабиринтToolStripMenuItem_Click);
-			// 
-			// сведенияОПрограммистеToolStripMenuItem
-			// 
-			this->сведенияОПрограммистеToolStripMenuItem->Name = L"сведенияОПрограммистеToolStripMenuItem";
-			this->сведенияОПрограммистеToolStripMenuItem->Size = System::Drawing::Size(242, 27);
-			this->сведенияОПрограммистеToolStripMenuItem->Text = L"Сведения о программисте";
-			this->сведенияОПрограммистеToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::сведенияОПрограммистеToolStripMenuItem_Click);
-			// 
-			// фигурыToolStripMenuItem
-			// 
-			this->фигурыToolStripMenuItem->Name = L"фигурыToolStripMenuItem";
-			this->фигурыToolStripMenuItem->Size = System::Drawing::Size(87, 27);
-			this->фигурыToolStripMenuItem->Text = L"Фигуры";
-			this->фигурыToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::mdiToolStripMenuItem_Click);
-			// 
-			// сортировкаToolStripMenuItem1
-			// 
-			this->сортировкаToolStripMenuItem1->Name = L"сортировкаToolStripMenuItem1";
-			this->сортировкаToolStripMenuItem1->Size = System::Drawing::Size(126, 27);
-			this->сортировкаToolStripMenuItem1->Text = L"Сортировка";
-			this->сортировкаToolStripMenuItem1->Click += gcnew System::EventHandler(this, &MyForm::сортировкаToolStripMenuItem_Click);
-			// 
-			// выходИзMyAppToolStripMenuItem
-			// 
-			this->выходИзMyAppToolStripMenuItem->Name = L"выходИзMyAppToolStripMenuItem";
-			this->выходИзMyAppToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Alt | System::Windows::Forms::Keys::X));
-			this->выходИзMyAppToolStripMenuItem->Size = System::Drawing::Size(157, 27);
-			this->выходИзMyAppToolStripMenuItem->Text = L"Выход из MyApp";
-			this->выходИзMyAppToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::выходИзMyAppToolStripMenuItem_Click);
 			// 
 			// tbTitle
 			// 
 			this->tbTitle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->tbTitle->Dock = System::Windows::Forms::DockStyle::Top;
-			this->tbTitle->Font = (gcnew System::Drawing::Font(L"Century Gothic", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->tbTitle->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->tbTitle->Location = System::Drawing::Point(0, 31);
-			this->tbTitle->Margin = System::Windows::Forms::Padding(4);
+			this->tbTitle->Location = System::Drawing::Point(0, 25);
 			this->tbTitle->Multiline = true;
 			this->tbTitle->Name = L"tbTitle";
 			this->tbTitle->ReadOnly = true;
-			this->tbTitle->Size = System::Drawing::Size(1527, 83);
+			this->tbTitle->Size = System::Drawing::Size(1443, 101);
 			this->tbTitle->TabIndex = 0;
-			this->tbTitle->Text = L"Добро пожаловать в программу, выполненную на практике!!!\r\nАвтор: Головей Тарас";
+			this->tbTitle->Text = L"Добро пожаловать в программу, выполненную на практике!!!\r\nАвтор: Борлаков Амин";
 			this->tbTitle->TextChanged += gcnew System::EventHandler(this, &MyForm::tbTitle_TextChanged);
 			// 
 			// lbOutput
@@ -340,11 +247,10 @@ namespace My {
 			this->lbOutput->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->lbOutput->FormattingEnabled = true;
-			this->lbOutput->ItemHeight = 20;
-			this->lbOutput->Location = System::Drawing::Point(0, 114);
-			this->lbOutput->Margin = System::Windows::Forms::Padding(4);
+			this->lbOutput->ItemHeight = 16;
+			this->lbOutput->Location = System::Drawing::Point(0, 126);
 			this->lbOutput->Name = L"lbOutput";
-			this->lbOutput->Size = System::Drawing::Size(519, 770);
+			this->lbOutput->Size = System::Drawing::Size(390, 592);
 			this->lbOutput->TabIndex = 0;
 			// 
 			// dgvOutput
@@ -356,10 +262,9 @@ namespace My {
 			});
 			this->dgvOutput->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->dgvOutput->Location = System::Drawing::Point(0, 0);
-			this->dgvOutput->Margin = System::Windows::Forms::Padding(4);
 			this->dgvOutput->Name = L"dgvOutput";
 			this->dgvOutput->RowHeadersWidth = 51;
-			this->dgvOutput->Size = System::Drawing::Size(1527, 884);
+			this->dgvOutput->Size = System::Drawing::Size(1443, 718);
 			this->dgvOutput->TabIndex = 4;
 			this->dgvOutput->Visible = false;
 			// 
@@ -547,10 +452,12 @@ namespace My {
 			// 
 			// formula1
 			// 
-			this->formula1->Location = System::Drawing::Point(1024, 31);
-			this->formula1->Margin = System::Windows::Forms::Padding(4);
+			this->formula1->ErrorImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"formula1.ErrorImage")));
+			this->formula1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"formula1.Image")));
+			this->formula1->InitialImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"formula1.InitialImage")));
+			this->formula1->Location = System::Drawing::Point(768, 25);
 			this->formula1->Name = L"formula1";
-			this->formula1->Size = System::Drawing::Size(395, 84);
+			this->formula1->Size = System::Drawing::Size(320, 100);
 			this->formula1->TabIndex = 6;
 			this->formula1->TabStop = false;
 			this->formula1->Visible = false;
@@ -558,10 +465,12 @@ namespace My {
 			// formula2
 			// 
 			this->formula2->BackColor = System::Drawing::Color::White;
-			this->formula2->Location = System::Drawing::Point(1092, 31);
-			this->formula2->Margin = System::Windows::Forms::Padding(4);
+			this->formula2->ErrorImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"formula2.ErrorImage")));
+			this->formula2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"formula2.Image")));
+			this->formula2->InitialImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"formula2.InitialImage")));
+			this->formula2->Location = System::Drawing::Point(768, 25);
 			this->formula2->Name = L"formula2";
-			this->formula2->Size = System::Drawing::Size(301, 75);
+			this->formula2->Size = System::Drawing::Size(320, 100);
 			this->formula2->TabIndex = 8;
 			this->formula2->TabStop = false;
 			this->formula2->Visible = false;
@@ -574,10 +483,9 @@ namespace My {
 			this->SortInput->Controls->Add(this->button1);
 			this->SortInput->Controls->Add(this->label1);
 			this->SortInput->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->SortInput->Location = System::Drawing::Point(519, 114);
-			this->SortInput->Margin = System::Windows::Forms::Padding(4);
+			this->SortInput->Location = System::Drawing::Point(390, 126);
 			this->SortInput->Name = L"SortInput";
-			this->SortInput->Size = System::Drawing::Size(1008, 770);
+			this->SortInput->Size = System::Drawing::Size(1053, 592);
 			this->SortInput->TabIndex = 10;
 			this->SortInput->Visible = false;
 			// 
@@ -586,11 +494,10 @@ namespace My {
 			this->dgvSort->BackgroundColor = System::Drawing::Color::White;
 			this->dgvSort->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dgvSort->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->Column1 });
-			this->dgvSort->Location = System::Drawing::Point(16, 31);
-			this->dgvSort->Margin = System::Windows::Forms::Padding(4);
+			this->dgvSort->Location = System::Drawing::Point(12, 25);
 			this->dgvSort->Name = L"dgvSort";
 			this->dgvSort->RowHeadersWidth = 51;
-			this->dgvSort->Size = System::Drawing::Size(484, 298);
+			this->dgvSort->Size = System::Drawing::Size(363, 242);
 			this->dgvSort->TabIndex = 5;
 			// 
 			// Column1
@@ -605,11 +512,9 @@ namespace My {
 			this->groupBox1->Controls->Add(this->radioButton3);
 			this->groupBox1->Controls->Add(this->radioButton2);
 			this->groupBox1->Controls->Add(this->radioButton1);
-			this->groupBox1->Location = System::Drawing::Point(16, 353);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
+			this->groupBox1->Location = System::Drawing::Point(12, 287);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
-			this->groupBox1->Size = System::Drawing::Size(224, 111);
+			this->groupBox1->Size = System::Drawing::Size(168, 90);
 			this->groupBox1->TabIndex = 4;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"ТИП СОРТИРОВКИ";
@@ -617,10 +522,9 @@ namespace My {
 			// radioButton3
 			// 
 			this->radioButton3->AutoSize = true;
-			this->radioButton3->Location = System::Drawing::Point(8, 80);
-			this->radioButton3->Margin = System::Windows::Forms::Padding(4);
+			this->radioButton3->Location = System::Drawing::Point(6, 65);
 			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(83, 20);
+			this->radioButton3->Size = System::Drawing::Size(69, 17);
 			this->radioButton3->TabIndex = 2;
 			this->radioButton3->Text = L"Быстрая";
 			this->radioButton3->UseVisualStyleBackColor = true;
@@ -630,10 +534,9 @@ namespace My {
 			// radioButton2
 			// 
 			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(8, 52);
-			this->radioButton2->Margin = System::Windows::Forms::Padding(4);
+			this->radioButton2->Location = System::Drawing::Point(6, 42);
 			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(87, 20);
+			this->radioButton2->Size = System::Drawing::Size(72, 17);
 			this->radioButton2->TabIndex = 1;
 			this->radioButton2->Text = L"Выбором";
 			this->radioButton2->UseVisualStyleBackColor = true;
@@ -644,10 +547,9 @@ namespace My {
 			// 
 			this->radioButton1->AutoSize = true;
 			this->radioButton1->Checked = true;
-			this->radioButton1->Location = System::Drawing::Point(8, 23);
-			this->radioButton1->Margin = System::Windows::Forms::Padding(4);
+			this->radioButton1->Location = System::Drawing::Point(6, 19);
 			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(102, 20);
+			this->radioButton1->Size = System::Drawing::Size(84, 17);
 			this->radioButton1->TabIndex = 0;
 			this->radioButton1->TabStop = true;
 			this->radioButton1->Text = L"Пузырьком";
@@ -656,10 +558,9 @@ namespace My {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(339, 353);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(254, 287);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(161, 44);
+			this->button2->Size = System::Drawing::Size(121, 36);
 			this->button2->TabIndex = 3;
 			this->button2->Text = L"Закрыть";
 			this->button2->UseVisualStyleBackColor = true;
@@ -669,10 +570,9 @@ namespace My {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(339, 405);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Location = System::Drawing::Point(254, 329);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(161, 59);
+			this->button1->Size = System::Drawing::Size(121, 48);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Сортировать";
 			this->button1->UseVisualStyleBackColor = true;
@@ -681,21 +581,52 @@ namespace My {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(8, 4);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(6, 3);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(63, 16);
+			this->label1->Size = System::Drawing::Size(52, 13);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"СПИСОК";
 			// 
+			// задание31ToolStripMenuItem
+			// 
+			this->задание31ToolStripMenuItem->Name = L"задание31ToolStripMenuItem";
+			this->задание31ToolStripMenuItem->Size = System::Drawing::Size(139, 21);
+			this->задание31ToolStripMenuItem->Text = L"Рекурсия и график";
+			this->задание31ToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::задачаToolStripMenuItem_Click);
+			// 
+			// выходИзMyAppToolStripMenuItem
+			// 
+			this->выходИзMyAppToolStripMenuItem->Name = L"выходИзMyAppToolStripMenuItem";
+			this->выходИзMyAppToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Alt | System::Windows::Forms::Keys::X));
+			this->выходИзMyAppToolStripMenuItem->Size = System::Drawing::Size(239, 21);
+			this->выходИзMyAppToolStripMenuItem->Text = L"Выход из консольного приложения";
+			this->выходИзMyAppToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::выходИзMyAppToolStripMenuItem_Click);
+			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->задание31ToolStripMenuItem,
+					this->выходИзMyAppToolStripMenuItem
+			});
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
+			this->menuStrip1->Size = System::Drawing::Size(1443, 25);
+			this->menuStrip1->TabIndex = 1;
+			this->menuStrip1->Text = L"menuStrip1";
+			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &MyForm::menuStrip1_ItemClicked);
+			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
-			this->ClientSize = System::Drawing::Size(1527, 884);
-			this->Controls->Add(this->SortInput);
+			this->ClientSize = System::Drawing::Size(1443, 718);
 			this->Controls->Add(this->formula2);
+			this->Controls->Add(this->SortInput);
 			this->Controls->Add(this->formula1);
 			this->Controls->Add(this->lbOutput);
 			this->Controls->Add(this->tbTitle);
@@ -703,12 +634,9 @@ namespace My {
 			this->Controls->Add(this->dgvOutput);
 			this->IsMdiContainer = true;
 			this->MainMenuStrip = this->menuStrip1;
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
-			this->Text = L"Программа для практики";
+			this->Text = L"Программа для 3 курса";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
-			this->menuStrip1->ResumeLayout(false);
-			this->menuStrip1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvOutput))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->formula1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->formula2))->EndInit();
@@ -717,6 +645,8 @@ namespace My {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvSort))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1003,7 +933,7 @@ namespace My {
 	}
 	private: System::Void оПрограммеToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Refr();
-		MessageBox::Show("Выполнил:\n\nГоловей Т.И.\nстудент гр. 1бИТС2");
+		MessageBox::Show("Выполнил:\n\nБорлаков А.А.\nстудент гр. 3бИТС2");
 	}
 	private: System::Void сортировкаToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Refr();
@@ -1013,9 +943,9 @@ namespace My {
 	}
 	private: System::Void задачаToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Refr();
-		tbTitle->Text = "Лабораторная работа №3";
+		tbTitle->Text = "";
 		formula1->Visible = true;
-		tbTitle->AppendText("\r\nТаблица расчитывается по формуле справа.");
+		tbTitle->AppendText("\nВычислим N значений параметрической функции Y=f(x,a) для аргумента x,\r\nизменяющегося от начального x1 с шагом dx.\r\nПостроить график по заданной формуле.");
 		int i, N, toc;
 		float a, k, X1, dX, X, Y;
 		const double ogr = 37, m_pi = 3.14159265358979323846;
@@ -1043,7 +973,7 @@ namespace My {
 				}
 				N = Convert::ToDouble(sRes);
 				if (N < 1 || N != Convert::ToInt16(N))goto inputb;
-				X1 = -10 * a;
+				X1 = 0,05 * a;
 				Input^ idt3 = gcnew Input;
 			inputc:
 				idt3->Text = "введите коэффициент k\n (k*a > " + "1 )";
@@ -1073,7 +1003,7 @@ namespace My {
 					//mdi->Show();
 					gr->MdiParent = this;
 					gr->Show();
-					gr->chOutput->Titles->FindByName("Title")->Text = "График значений по функции F (Задание 3.1)";
+					gr->chOutput->Titles->FindByName("Title")->Text = "График параметрической функции F(x, A)";
 					gr->chOutput->Series->FindByName("Значение")->LegendText = "F";
 					gr->chOutput->Series->Remove(gr->chOutput->Series->FindByName("Накопленное"));
 					for (int i = 0; i < N; i++) {
@@ -1111,6 +1041,8 @@ namespace My {
 			}
 		}
 	}
+
+
 	private: System::Void gdfToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		while (ActiveMdiChild) delete(ActiveMdiChild);
 	}
@@ -1229,6 +1161,7 @@ namespace My {
 		Refr();
 	}
 	private: System::Void лабораторнаяРабота4матрицаToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		Refr();
 		//	setlocale(LC_ALL, "Russian");
 			//printf("Задание 4:\tАлгоритмы с вложенными циклами:\n\t\tОбработка матриц");
 			//printf("Введите размер матрицы в формате \"ШИРИНА ВЫСОТА\": 
@@ -1341,7 +1274,8 @@ namespace My {
 	private: System::Void задание31ToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void сведенияОПрограммистеToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		tbTitle->Text = "Программу выполнил студент 1бИТС2 Борлаков Амин";
+		Refr();
+		tbTitle->Text = "Программу выполнил студент 3бИТС2 Борлаков Амин";
 	}
 
 	private: System::Void tbTitle_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -1425,7 +1359,7 @@ public:
 	CRectangle(int pnx, int pny, int pnWidth, int pnHeight, int pbrushcolor, int ppencolor);
 
 	virtual void Draw() {
-		//HWND hwnd = GetConsoleWindow();
+//		HWND hwnd = GetConsoleWindow();
 //LOGBRUSH lpBrush;
 //lpBrush.lbStyle = BS_SOLID;
 //lpBrush.lbColor = BrushColor();
@@ -1434,14 +1368,14 @@ public:
 //SelectObject(hdc, hbrush);
 //HPEN hpen = CreatePen(PS_SOLID, 2, PenColor());
 //SelectObject(hdc, hpen);
-////HPEN pen = CreatePen(PS_SOLID, 2, RGB(255, 258, 255)), //pink
-////	pen2 = CreatePen(PS_SOLID, 2, RGB(0, 255, 0)), //green
-////	pen3 = CreatePen(PS_SOLID, 2, RGB(255, 0, 0)), //red
-////	pen4 = CreatePen(PS_SOLID, 2, RGB(255, 255, 0)); //yellow
-////LOGBRUSH Igbr{ PS_SOLID, RGB(78, 78, 78), 0 };
-////HBRUSH brush = CreateBrushIndirect(&Igbr);
-////SelectObject(hdc, pen2);
-////SelectObject(hdc, brush);
+//HPEN pen = CreatePen(PS_SOLID, 2, RGB(255, 258, 255)), //pink
+//	pen2 = CreatePen(PS_SOLID, 2, RGB(0, 255, 0)), //green
+//	pen3 = CreatePen(PS_SOLID, 2, RGB(255, 0, 0)), //red
+//	pen4 = CreatePen(PS_SOLID, 2, RGB(255, 255, 0)); //yellow
+//LOGBRUSH Igbr{ PS_SOLID, RGB(78, 78, 78), 0 };
+//HBRUSH brush = CreateBrushIndirect(&Igbr);
+//SelectObject(hdc, pen2);
+//SelectObject(hdc, brush);
 ////ris grapha
 //Rectangle(hdc, Left(), Top(), Right(), Bottom());
 ///*std::string text = to_string(ID());
